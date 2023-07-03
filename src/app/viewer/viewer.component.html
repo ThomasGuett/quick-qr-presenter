@@ -1,0 +1,19 @@
+<mat-card>
+    <!-- blank form stage -->
+    <div>
+        <form>
+            <div class="input-container">
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>url</mat-label>
+                        <input type="text" matInput (input)="update($event)" />
+                    </mat-form-field>
+                </div>
+                <mat-divider></mat-divider>
+                <div>
+                    <qrcode [qrdata]="displayUrl" [width]="500" [errorCorrectionLevel]="'M'" [imageWidth]="50" [margin]="1"></qrcode>
+                </div>
+            </div>
+        </form>
+    </div>
+</mat-card>
